@@ -1,12 +1,14 @@
 # Site settings
-title: Marc Kimbrey
+title: MarcKimbrey
 email: marckimbrey@gmail.com
 description: I'm Marc Kimbrey a budding web developer based in Bristol. This is my site to show my work and blog about anything I find interesting or useful.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: marckimbrey
 github_username:  marckimbrey
+gems: [jekyll-paginate]
 paginate: 10
+paginate_path: "/blog/page:num"
 
 # Build settings
 markdown: kramdown

@@ -2,12 +2,34 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+
+    z-index: 1;
+    position: relative;
+    background-color: $brand-color;
+    margin-bottom: 100px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
+ 
+    .skew:before {
+          content: ' ';
+          position: absolute;
+          left: 0;
+          top: 0;
+          overflow: visible;
+          width: 100%;
+          height: 100px;   
+          margin-top: 20px;
+          background: $brand-color;
+          z-index: -1;
+          -webkit-transform: skewY(-1.5deg);
+          -moz-transform: skewY(-1.5deg);
+          -ms-transform: skewY(-1.5deg);
+          -o-transform: skewY(-1.5deg);
+          transform: skewY(-1.5deg);
+          -webkit-backface-visibility: hidden;
+          backface-visibility: initial;
+    }
 }
 
 .site-title {
@@ -20,6 +42,9 @@
     &,
     &:visited {
         color: $grey-color-dark;
+    }
+    &:hover {
+        font-weight: bold;
     }
 }
 
@@ -38,6 +63,9 @@
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
             margin-left: 20px;
+        }
+        &:hover{
+            font-weight: bold;
         }
     }
 
@@ -84,6 +112,11 @@
             padding: 5px 10px;
         }
     }
+}
+
+.profile-pic {
+    
+    border-radius: 50%;     
 }
 
 
