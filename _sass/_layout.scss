@@ -3,22 +3,28 @@
  */
 .site-header {
 
-    z-index: 1;
+    z-index: 4;
     position: relative;
     background-color: $brand-color;
     margin-bottom: 100px;
 
+    height: 150px;
+    @include media-query($on-palm) {
+        height: 60px;
+    }
+    @include media-query($on-laptop) {
+        height: 100px;
+    }
     // Positioning context for the mobile navigation icon
     position: relative;
- 
-    .skew:before {
-          content: ' ';
+    &:before {
+          content: '';
           position: absolute;
           left: 0;
           top: 0;
           overflow: visible;
           width: 100%;
-          height: 100px;   
+          height: 200px;
           margin-top: 20px;
           background: $brand-color;
           z-index: -1;
@@ -29,36 +35,107 @@
           transform: skewY(-1.5deg);
           -webkit-backface-visibility: hidden;
           backface-visibility: initial;
+        @include media-query($on-palm) {
+            height: 100px;
+        }
+        @include media-query($on-laptop) {
+            height: 150px;
+        }
+    }
+
+
+    h1 {
+        padding-top: 30px;
+        font-size: 3em;
+        line-height: 56px;
+        letter-spacing: -1px;
+        margin:0 0 10px 0;
+
+        @include media-query($on-palm) {
+            font-size: 1.8em
+        }
+        @include media-query($on-laptop) {
+            font-size: 2.25em
+        }
+        .site-title {
+            border-bottom: 3px solid $grey-color;
+
+            &,
+            &:visited {
+                color: $grey-color-dark;
+            }
+            &:hover {
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+        }
+    }
+    .site-desc {
+        font-size: 1.5em;
+        @include media-query($on-palm) {
+            font-size: 1em
+        }
+        @include media-query($on-laptop) {
+            font-size: 1.2em
+        }
     }
 }
 
-.site-title {
-    font-size: 26px;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-
-    &,
-    &:visited {
-        color: $grey-color-dark;
-    }
-    &:hover {
-        font-weight: bold;
-    }
-}
 
 .site-nav {
-    float: right;
+    position: absolute;
+    top: 30px;
+    right: 40px;
     line-height: 56px;
+        @include media-query($on-palm) {
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 200px;
+        z-index: 3;
+
+
+    }
 
     .menu-icon {
-        display: none;
+       display: none;
+        height: 40px;
+        width: 40px;
+        @include media-query($on-palm) {
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            display: block;
+        }
+        .menu-icon-line {
+            height: 6px;
+            width: 30px;
+            border-radius: 5px;
+            background: $text-color;
+            margin: 3px 0;
+
+            &:first-of-type {
+                transition: transform .6s;
+                transform-origin: left top;
+            }
+            &:nth-of-type(2) {
+
+            }
+            &:last-of-type {
+              transition: transform .6s;
+              transform-origin: left bottom;
+            }
+
+        }
+
     }
 
     .page-link {
         color: $text-color;
         line-height: $base-line-height;
+        font-size: 1.5em;
+
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
@@ -67,56 +144,23 @@
         &:hover{
             font-weight: bold;
         }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
+        @include media-query($on-palm) {
+            font-size: 1em;
             display: none;
         }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
+        @include media-query($on-laptop) {
+            font-size: 1.2em;
         }
     }
 }
+.site-nav-active {
+
+}
 
 .profile-pic {
-    
-    border-radius: 50%;     
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
 }
 
 
