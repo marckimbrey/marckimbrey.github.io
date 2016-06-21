@@ -1,7 +1,11 @@
 # Site settings
 title: MarcKimbrey
 email: marckimbrey@gmail.com
-description: I'm Marc Kimbrey a budding web developer based in Bristol. This is my site to show my work and blog about anything I find interesting or useful.
+description: |
+  I'm Marc Kimbrey a budding JavaScript developer based in Bristol.
+  I like to build things on the internet. Am focused mostly on Front-end
+  technologies and building modern responsive web applications. Im always looking
+  for an interesting challenge or opportunity so feel free to contact me.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: marckimbrey
@@ -13,7 +17,6 @@ paginate_path: "/blog/page:num"
 # Build settings
 markdown: kramdown
 permalink: /:title
-
 # Default settings
 
 defaults:
