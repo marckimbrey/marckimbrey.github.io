@@ -1,0 +1,33 @@
+- title: wiki search
+  image: /assets/wikisearch.jpg
+  link: http://s.codepen.io/MarcKimbrey/debug/xZzpNa
+  description: Search app for Wikipedia. Built using wikipedia api and has autocomplete functionality.
+  tags:
+    - html
+    - css
+    - jquery
+- title: Simon Game
+  image: /assets/simongame.jpg
+  link: http://s.codepen.io/MarcKimbrey/debug/VaqpVB
+  description: Simon game built using plain javascript.
+  tags:
+    - html
+    - css
+    - javaScript
+- title: Tic Tac Toe
+  image: /assets/tictactoe.jpg
+  link: http://s.codepen.io/MarcKimbrey/debug/EKwXXP
+  description: Single player tic tac toe game with an Ai. Ai built using the minimax algorithm.
+  tags:
+    - html
+    - css
+    - jquery
+- title: javaScript Calculator
+  image: /assets/javascriptcalculator.jpg
+  link: http://s.codepen.io/MarcKimbrey/debug/eJWNGP
+  description: Simple JavaScript calculator built using bootstrap.
+  tags:
+    - html
+    - css
+    - jquery
+    - bootstrap
