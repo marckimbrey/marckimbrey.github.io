@@ -2,10 +2,29 @@
 layout: default
 ---
 
-<div class="home">
-	  <img class= "profile-pic" src="{{site.baseurl}}/assets/profilepic.jpg" alt="picture of marc kimbrey">
-
-
-
-
+<div class="about">
+	  <img class="profile-pic" src="{{site.baseurl}}/assets/profilepic.jpg" alt="picture of marc kimbrey">
+		<p class="about">{{site.description}}</p>
+		<ul class="social-icons">
+			<li class="social-icon"><a href="https://github.com/marckimbrey"><i class="fa fa-3x fa-github" aria-hidden="true"></i></a></li>
+			<li class="social-icon"><a href="http://codepen.io/MarcKimbrey/pens/public/"><i class="fa fa-3x fa-codepen" aria-hidden="true"></i></a></li>
+			<li class="social-icon"><a href="https://twitter.com/marckimbrey"><i class="fa fa-3x fa-twitter" aria-hidden="true"></i></a></li>
+			<li class="social-icon"><a href="mailto:{{ site.email }}>"<i class="fa fa-3x fa-envelope" aria-hidden="true"></i></a></li>
+		</ul>
+</div>
+<div class="projects">
+	{% for project in site.data.projects %}
+	<div class="project">
+		<h3 class="project-title">{{ project.title }}</h3>
+		<a  href="{{ project.link }}"><img class="project-image" src="{{ project.image }}" alt="{{ project.description }}" /></a>
+		<div class="project-details">
+			<p class="project-description">{{ project.description }}</p>
+			<ul class="project-tags">
+				{% for tag in project.tags %}
+					<li class="project-tag">{{ tag }}</li>
+					{% endfor %}
+			</ul>
+		</div>
+	</div>
+	{% endfor %}
 </div>

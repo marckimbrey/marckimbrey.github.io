@@ -52,7 +52,7 @@
         line-height: 56px;
         letter-spacing: -1px;
         margin:0 0 10px 0;
-      
+
 
         @include media-query($on-palm) {
             font-size: 1.8em
@@ -175,12 +175,94 @@
     }
 }
 
-
+/**
+ * Index page
+ */
 .profile-pic {
     display: block;
     border-radius: 50%;
     margin: 0 auto;
+    @include media-query($on-palm) {
+      max-width: 80%;
+    }
 }
+.about {
+  max-width: 80%;
+  margin: 25px auto;
+  text-align: center;
+  font-size: 1.1em;
+  @include media-query($on-palm) {
+    max-width: 90%;
+  }
+}
+.social-icons {
+  width: 100%;
+  display: flex;
+  margin: 20px auto;
+  width: 80%;
+  @include media-query($on-palm) {
+    width: 90%;
+  }
+  .social-icon {
+    list-style: none;
+    flex-grow: 1;
+    a {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+// projects
+.projects {
+  margin: 100px 0;
+}
+.project {
+  margin: 30px 0;
+  border: 10px solid $brand-color;
+  border-radius: 30px;
+  .project-title {
+    text-align: center;
+  }
+  .project-details {
+    width: 34%;
+    padding: 2% 0 2% 2%;
+    display: inline-block;
+
+    @include media-query($on-palm) {
+      width: 90%;
+    }
+  }
+  a {
+    width: 65%;
+  }
+  .project-tags {
+    list-style: none;
+    .project-tag {
+      background: $tag-color;
+      color: #fff;
+      border-radius: 5px;
+      padding: 3px 5px 3px 7px;;
+      display: inline;
+      &::before {
+        font-family: 'FontAwesome';
+        content: '\f121';
+        margin:0 5px 0 5px;
+        color: #fff;
+      }
+    }
+  }
+  .project-image {
+      width: 58%;
+      padding: 2%;
+      @include media-query($on-palm) {
+        width: 90%;
+      }
+  }
+}
+
+
 
 
 
