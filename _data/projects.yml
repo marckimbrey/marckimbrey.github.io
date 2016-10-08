@@ -1,3 +1,12 @@
+- title: Recipe Box
+  image: /assets/recipe-box.jpg
+  link: https://marckimbrey.github.io/recipe-box/
+  description: React app to store recipes using local storage.
+  tags:
+    - html
+    - scss
+    - javascript
+    - react
 - title: wiki search
   image: /assets/wikisearch.jpg
   link: http://s.codepen.io/MarcKimbrey/debug/xZzpNa
